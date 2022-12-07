@@ -1,5 +1,13 @@
+from dataclasses import dataclass
 import pandas as pd
 import numpy as np
+
+
+@dataclass
+class PageData:
+  path: str
+  raw_screenshot_path: str
+  clicks_screenshot_path: str
 
 
 def get_page_click_normal_coordinates(csv_data: str, route_filter: str) -> np.array:
